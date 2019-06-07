@@ -1,7 +1,7 @@
 import time
 from random import randint
 
-agente = "#"
+agente = "*"
 limpo = 0
 ambiente = [[1,4,0,0,2,0,3],
             [0,0,3,1,0,4,0],
@@ -14,13 +14,13 @@ ambiente = [[1,4,0,0,2,0,3],
 def printar(ambiente):
     for secao in ambiente:
         print(secao)
-    print(30*"\n")
+    print(20*"\n")
 
 def sujaambiente(ambiente):
     for secao in ambiente:
         atual = 0
         for local in secao:
-            secao[atual] = randint(0,4)
+            secao[atual] = randint(0,6)
             atual +=1
     return ambiente
 
